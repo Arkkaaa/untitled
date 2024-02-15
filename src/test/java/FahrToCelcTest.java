@@ -11,4 +11,10 @@ public class FahrToCelcTest {
         assertEquals(100.0, ftc.fahrToCelc(212.0), 0.0001);
         assertEquals(-40.0, ftc.fahrToCelc(-40.0), 0.0001);
     }
+    @Test
+    public void testKelvintoCel() {
+        assertEquals(0.0, FahrToCelc.kelvintoCel((float) 273.15), 0.0001);
+        assertEquals(-273.15, FahrToCelc.kelvintoCel(0), 0.0001);
+        assertEquals(100.0, FahrToCelc.kelvintoCel((float) 373.15), 0.0001);
+    }
 }

@@ -7,14 +7,13 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master', credentialsId: 'Arkkaaa', url: 'https://github.com/Arkkaaa/untitled'
-                
-        )
             }
         }
         stage('Build') {
             steps {
+                withMaven{
                 bat 'mvn clean install'
-            
+                }
             }
         }
         stage('Test') {

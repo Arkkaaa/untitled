@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH = "${env.PATH};C:\\Windows\\System32"
+        PATH="%PATH%;$MAVEN_BIN%"
     }
     stages {
         stage('Checkout') {

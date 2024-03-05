@@ -17,4 +17,10 @@ public class FahrToCelcTest {
         assertEquals(-273.15, FahrToCelc.kelvintoCel(0), 0.0001);
         assertEquals(100.0, FahrToCelc.kelvintoCel((float) 373.15), 0.0001);
     }
+    @Test
+    public void testKelvintoFahr() {
+        assertEquals(32.0, new FahrToCelc().kelvintoFahr(273.15), 0.0001);
+        assertEquals(-459.67, new FahrToCelc().kelvintoFahr(0), 0.0001);
+        assertEquals(212.0, new FahrToCelc().kelvintoFahr(373.15), 0.0001);
+    }
 }
